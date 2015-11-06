@@ -13,6 +13,7 @@ while True:
         num = int(raw_num)
         break
     elif(len(raw_num) == 0):
+        print("No input deteced. Use 100 as default.")
         num = 100
         break
     else:
