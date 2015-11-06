@@ -3,15 +3,25 @@ import sys
 print("The name of this script is {}".format(sys.argv[0]))
 print("User supplied {} arguments at run time".format(len(sys.argv)))
 
+retryCount = 0
+retryLimit = 5
+raw_num = 0
+num = 0
+while True:
+    raw_num = raw_input("Input your numbers: ")
+    if(str.isdigit(raw_num)):
+        num = int(raw_num)
+        break
+    elif(len(raw_num) == 0):
+        num = 100
+        break
+    else:
+        print("Input error. Plrease re-enter.")
+        retryCount += 1
+        if(retryCount >= retryLimit):
+            print("Error too much. Exit.")
+            break
         
-raw_num = raw_input("Input your numbers: ")
-if(str.isdigit(raw_num)):
-    num = int(raw_num)
-elif(len(raw_num) == 0):
-    num = 100
-else:
-    print("Input error..")
-    exit()
     
 
 a = range(1, num)
