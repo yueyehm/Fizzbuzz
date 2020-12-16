@@ -34,6 +34,9 @@ for b in a:
     else:
         print b
 
+
+
+
     
     
         
